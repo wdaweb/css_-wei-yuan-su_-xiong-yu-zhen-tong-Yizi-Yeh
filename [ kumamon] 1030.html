@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 左右腮紅 before after */
+      .kao {
+        height: 250px;
+        width: 250px;
+        border-radius: 50%;
+        border: 1px solid black;
+        background: black;
+        margin: 25% auto;
+        position: relative;
+        z-index: -999;
+      }
+      .kao::before {
+        content: "";
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        border: 0px solid black;
+        background: red;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: -90%;
+        bottom: 0;
+        margin: auto;
+      }
+      .kao::after {
+        content: "";
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        border: 0px solid black;
+        background: red;
+        position: absolute;
+        top: 0;
+        right: -90%;
+        left: 0;
+        bottom: 0;
+        margin: auto;
+      }
+
+      /* 本體：底 白底黑底 before after */
+      .mimi-left {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        border: 0px solid black;
+        background: black;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: -65%;
+        margin: auto;
+      }
+      .mimi-left::after {
+        content: "";
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        border: 0px solid black;
+        background: white;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        margin: auto;
+      }
+      /* 本體：底 白底黑底 before after */
+      .mimi-right {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        border: 0px solid black;
+        background: black;
+        position: absolute;
+        top: 0;
+        right: -65%;
+        left: 0;
+        margin: auto;
+      }
+      .mimi-right::after {
+        content: "";
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        border: 0px solid black;
+        background: white;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        margin: auto;
+      }
+      .me-left {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        border: 0px solid black;
+        background: white;
+        position: absolute;
+        top: 10%;
+        right: 0;
+        left: -35%;
+        bottom: 50%;
+        margin: auto;
+      }
+      .me-left::after {
+        content: "";
+        height: 35px;
+        width: 35px;
+        border-radius: 50%;
+        border: 0px solid black;
+        background: black;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        margin: auto;
+      }
+      .me-right {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        border: 0px solid black;
+        background: white;
+        position: absolute;
+        top: 10%;
+        right: -35%;
+        left: 0;
+        bottom: 50%;
+        margin: auto;
+      }
+      .me-right::after {
+        content: "";
+        height: 35px;
+        width: 35px;
+        border-radius: 50%;
+        border: 0px solid black;
+        background: black;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        margin: auto;
+      }
+
+      /* 本底：底 小黑上圓before 下圓after */
+      .hana {
+        height: 70px;
+        width: 110px;
+        border-radius: 50%;
+        border: 1px solid black;
+        background: white;
+        position: absolute;
+        top: 10%;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        margin: auto;
+      }
+      .hana::before {
+        content: "";
+        height: 20px;
+        width: 70px;
+        border-radius: 50%;
+        border: 1px solid black;
+        background: black;
+        position: absolute;
+        top: 35%;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        margin: auto;
+      }
+
+      .hana::after {
+        content: "";
+        height: 15px;
+        width: 25px;
+        border-radius: 50%;
+        border: 1px solid black;
+        background: black;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 50%;
+        margin: auto;
+      }
+
+      /* 本底：黑底 左右白底 before after */
+      .vkata {
+        height: 250px;
+        width: 250px;
+        border-radius: 50%;
+        border: 1px solid black;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        margin: auto;
+        z-index: -999;
+      }
+      .vkata::before {
+        content: "";
+        height: 25px;
+        width: 25px;
+        border: 0px solid black;
+        background: white;
+        position: absolute;
+        top: 70%;
+        right: 0;
+        left: -15%;
+        bottom: 0;
+        margin: auto;
+        transform: skewX(50deg);
+      }
+      .vkata::after {
+        content: "";
+        height: 25px;
+        width: 25px;
+        border: 0px solid black;
+        background: white;
+        position: absolute;
+        top: 70%;
+        right: -15%;
+        left: 0;
+        bottom: 0;
+        margin: auto;
+        transform: skewX(-50deg);
+      }
+    </style>
+  </head>
+  <div class="kao">
+    <div class="mimi-left"></div>
+    <div class="mimi-right"></div>
+    <div class="me-left"></div>
+    <div class="me-right"></div>
+    <div class="hana"></div>
+    <div class="vkata"></div>
+  </div>
+  <body></body>
+</html>

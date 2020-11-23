@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body,
+      html {
+        position: relative;
+      }
+      .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        height: auto;
+        margin: 20% auto;
+        border: 1px solid white;
+        padding: 10px;
+      }
+      .container::before {
+        position: absolute;
+        content: "";
+        background: linear-gradient(white, rgb(216, 216, 64));
+        left: 10%;
+        flex-grow: 1;
+        width: 240px;
+        height: 100px;
+        left: 9.8%;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        order: 1;
+        z-index: 1;
+      }
+      .container::after {
+        position: absolute;
+        content: "";
+        background: black;
+        width: 50px;
+        height: 100px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: -4%;
+        margin: auto;
+        order: 0;
+        z-index: 9999;
+      }
+      .saigo {
+        background: linear-gradient(white, lightgrey, white);
+        border: 1px solid lightgray;
+        width: 40px;
+        height: 100px;
+        border-radius: 10%;
+      }
+      .left {
+        background: linear-gradient(white, lightgrey, white);
+        border: 1px solid lightgray;
+        width: 50px;
+        height: 70px;
+      }
+      .nakami {
+        /* background:linear-gradient(方向, 顏色1 位置, 顏色2 位置); */
+        background: linear-gradient(white, lightgrey, white);
+        border: 1px solid lightgray;
+        width: 420px;
+        height: 100px;
+        /* display: flex;
+        flex-direction: row; */
+      }
+
+      .right {
+        background: linear-gradient(white, lightgrey, white);
+        border: 1px solid lightgray;
+        width: 50px;
+        height: 70px;
+        border-radius: 8%;
+      }
+      .hori {
+        background: black;
+        border: 1px solid lightgray;
+        width: 80px;
+        height: 0.5px;
+      }
+      .scale {
+        width: 420px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+      }
+      .scale span {
+        height: 10px;
+
+        border: 0.01px lightgray solid;
+        z-index: 9999;
+        align-self: start;
+      }
+      .text {
+        width: auto;
+        height: auto;
+        margin-top: 17%;
+        margin-bottom: 0;
+      }
+      .text p {
+        width: auto;
+        height: auto;
+        color: lightgray;
+        font-size: 0.8rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="saigo"></div>
+      <div class="left"></div>
+      <div class="nakami">
+        <div class="scale">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="text"><p>Made in Taiwan</p></div>
+      </div>
+      <div class="right"></div>
+      <div class="hori"></div>
+    </div>
+  </body>
+</html>
